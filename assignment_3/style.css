@@ -1,0 +1,343 @@
+/* ═══════════════════════════════════════════════
+   Electricity Bill Calculator — style.css
+   Clean, professional, utility-themed palette
+═══════════════════════════════════════════════ */
+
+/* ── Google Font ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+    --bg:          #f0f4f8;
+    --card:        #ffffff;
+    --primary:     #1a6fc4;
+    --primary-dk:  #155ba0;
+    --accent:      #f5a623;
+    --danger:      #d94f4f;
+    --danger-bg:   #fdf2f2;
+    --text:        #1e2a3a;
+    --muted:       #6b7a8d;
+    --border:      #dce3ed;
+    --result-bg:   #f0f7ff;
+    --radius:      10px;
+    --shadow:      0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Base ── */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 16px 60px;
+    line-height: 1.6;
+}
+
+/* ── Page wrapper ── */
+.page-wrapper {
+    max-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ── Header ── */
+.site-header {
+    text-align: center;
+    padding: 32px 24px 28px;
+    background: linear-gradient(135deg, var(--primary) 0%, #1e8bc3 100%);
+    border-radius: var(--radius);
+    color: #fff;
+    box-shadow: var(--shadow);
+}
+
+.header-icon {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+}
+
+.site-header h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.site-header .subtitle {
+    margin-top: 6px;
+    font-size: 0.92rem;
+    opacity: 0.85;
+}
+
+/* ── Rate Card ── */
+.rate-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.rate-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.rate-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.rate-table thead tr {
+    background: var(--bg);
+}
+
+.rate-table th,
+.rate-table td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.rate-table th {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.rate-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.rate-table tbody tr:hover {
+    background: #f7fafd;
+}
+
+/* ── Card ── */
+.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 28px 28px 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* ── Alert ── */
+.alert {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.alert-error {
+    background-color: var(--danger-bg);
+    border: 1px solid #f5c6c6;
+    color: var(--danger);
+}
+
+.alert-error strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.alert-error ul {
+    padding-left: 18px;
+}
+
+.alert-error li {
+    margin-top: 2px;
+}
+
+/* ── Form ── */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--text);
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26, 111, 196, 0.12);
+}
+
+.form-group input::placeholder {
+    color: #b0b8c4;
+}
+
+/* ── Buttons ── */
+.btn-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.btn {
+    flex: 1;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dk);
+}
+
+.btn-secondary {
+    background-color: var(--bg);
+    color: var(--text);
+    border: 1.5px solid var(--border);
+}
+
+.btn-secondary:hover {
+    background-color: #e4eaf2;
+}
+
+/* ── Result Card ── */
+.result-card {
+    background: var(--result-bg);
+    border-color: #c0d9f5;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #c0d9f5;
+}
+
+.result-icon {
+    font-size: 1.5rem;
+}
+
+.result-header h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.result-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 0;
+    border-bottom: 1px dashed #c9ddf0;
+    font-size: 0.95rem;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.result-value {
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Highlighted total row */
+.result-item.highlight {
+    background: #fff;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: none;
+    box-shadow: 0 1px 6px rgba(26, 111, 196, 0.1);
+}
+
+.result-item.highlight .result-label {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.amount {
+    font-size: 1.4rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* ── Footer ── */
+.site-footer {
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+    padding-top: 4px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 400px) {
+    .btn-row {
+        flex-direction: column;
+    }
+    .card {
+        padding: 22px 18px;
+    }
+}
